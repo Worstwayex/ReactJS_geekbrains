@@ -1,24 +1,21 @@
 import React from 'react';
 import './App.css';
-import Messages from "./Messages/Messages"
+import MessageField from './Components/Messages/MessageField';
+import ChatList from './Components/ChatList/ChatList'
+import Header from './Components/Header/Header'
 
-class App extends React.Component{
-  state = {
-    messages: [],
-  }
-  handleClick = () =>{
-    this.setState(prevState =>({
-      messages: [...prevState.messages,"Normalno"]
-    }))
-  }
-  render(){
-  return (
-    <div className="App">
-        <Messages messages = {this.state.messages}/>
-        <button onClick = {this.handleClick}>Click</button>
-    </div>
-  );
-};
+class Layout extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <div style={{ width: '100%', display: 'flex', marginTop: "10px" }}>
+          <ChatList />
+          <MessageField />
+        </div>
+      </div>
+    );
+  };
 }
 
-export default App;
+export default Layout;

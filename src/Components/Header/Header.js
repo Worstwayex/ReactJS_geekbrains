@@ -35,7 +35,7 @@ function Header(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            {(props.chatId===undefined)? "": `${props.chats[props.chatId].title}` }
+            {(props.chats[props.chatId]===undefined)? "": `${props.chats[props.chatId].title}` }
           </Typography>
           <Link to = '/profile/' style ={{color: "white"}}>
             <Button color="inherit">{props.profile.username}</Button>

@@ -63,7 +63,7 @@ class MessageField extends React.Component{
     };
     render(){
         const { chatId, chats, messages} = this.props;
-    if(this.props.chatId !== undefined)
+    if(this.props.chats[chatId] !== undefined)
     {return(
         <div className="layout">
             <div className="message-field">

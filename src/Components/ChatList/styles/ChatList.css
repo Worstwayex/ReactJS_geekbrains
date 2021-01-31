@@ -1,0 +1,13 @@
+.ChatList{
+    width: 30%;
+    background: #8b8b8acf;
+    overflow-y: auto;
+    height: inherit;
+}
+
+.Button {
+    display: flex;
+    height: 6px;
+    width: 36px;
+    box-shadow: none;
+}
